@@ -21,8 +21,8 @@ h1 {
     position: fixed;
     display: flex;
     margin-top: 0;
-    top: 25px;
-    left: 70px;
+    top: -30px;
+    left: 30px;
     z-index: 10; /* Bakgrunnsnivå */
 }
 
