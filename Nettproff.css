@@ -1,0 +1,311 @@
+body{
+    background: color #212121;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth; /* Glatt scrolling */
+    scroll-padding-top: 90px; /* Justerer hvor langt ned siden blar */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    padding-top: 260px;
+    text-align: center; /* Sentraliserer overskriften */
+    font-size: xxx-large; /* Stor skriftstørrelse */
+    color: #ffffff; /* Mørk grå tekst */
+    /*text-shadow: 0px 2px 5px rgb(255, 255, 255); /* Lett hvit skygge */
+}
+
+.logo{
+    position: relative;
+    position: fixed;
+    display: flex;
+    margin-top: 0;
+    top: -30px;
+    left: 30px;
+    z-index: 10; /* Bakgrunnsnivå */
+}
+
+
+
+/* Øverste bilde på side 1 */
+.Øverste-bilde{
+    margin: 0; /* Fjerner marg */
+    padding: 0; /* Fjerner padding */
+    position: absolute; /* Plassering i forhold til sidens kanter */
+    top: 0; /* Justerer til toppen av siden */
+    left: 0; /* Justerer til venstre */
+    width: 100.5%; /* Bildet dekker hele bredden */
+    z-index: -1; /* Bakgrunnsnivå */
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Meny som for scrolling */
+.meny {
+    position: fixed; /* Holder menyen på toppen av vinduet */
+    top: 0px; /* 4 piksler fra toppen */
+    right: 0; /* Plassering på høyre side */
+    width: 100%; /* Menyen dekker 88% av bredden */
+    background-color: #000e51; /* Lys grå bakgrunn */
+    padding: 20px 100px; /* Justerer indre avstand */
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.466); /* Skygge */
+    text-align: right; /* Sentrerer innholdet */
+    border-radius: 3px; /* Runde hjørner */
+    z-index: 1;
+}
+
+/* Stiler for lenkene i menyen */
+.meny a {
+    margin: 0 60px; /* Avstand mellom lenkene */
+    text-decoration: none; /* Ingen understrekning */
+    color: #c7c7c7; /* Svart tekst */
+    padding: 20px 5px; /* Indre avstand */
+    display: inline-block; /* Vises i samme linje */
+    border-radius: 3px; /* Runde hjørner */
+}
+
+.meny a:hover {
+    /*padding: 1px 1px; /* Justerer størrelsen ved hover */
+    color: #ffffff; /* Hvit tekstfarge */
+    /*background-color: #c0c0c0; /* Grå bakgrunn ved hover */
+    text-decoration: none; /* Fjerner understrekning */
+    border-radius: 3px; /* Runde hjørner */
+}
+
+/*Hvit bakgrunn bak teksten */
+.Om-oss-bakgrunn {
+    position: absolute;
+    background-color: #000e51; /* Grå bakgrunn med 80 % gjennomsiktighet */
+    width: 100.5%; /* Dekker 70 % av bredden */
+    margin: 0 auto; /* Sentrerer grå bakgrunn */
+    margin-top: 140px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.667); /* Skygge */
+    min-height: 100px; /* Gjør at bakgrunn dekker hele sidehøyden */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Sentrerer bakgrunn*/
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/*Hvit bakgrunn bak teksten */
+.sentral-bakgrunn {
+    background-color: #42506B; /* Grå bakgrunn med 80 % gjennomsiktighet */
+    width: 100%; /* Dekker 70 % av bredden */
+    margin: 0 auto; /* Sentrerer grå bakgrunn */
+    /*box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.667); /* Skygge */
+    min-height: 100vh; /* Gjør at bakgrunn dekker hele sidehøyden */
+    margin-top: 270px; /* Unngå overlapping med hoved-menyen */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Sentrerer bakgrunn*/
+    text-align: center;
+}
+
+.bakgrunn-kontaktoss {
+    background-color: #212121; /* Grå bakgrunn med 80 % gjennomsiktighet */
+    width: 100%; /* Dekker 70 % av bredden */
+    margin: 0 auto; /* Sentrerer grå bakgrunn */
+    /*box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.667); /* Skygge */
+    min-height: 100vh; /* Gjør at bakgrunn dekker hele sidehøyden */
+    margin-top: 0px; /* Unngå overlapping med hoved-menyen */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Sentrerer bakgrunn*/
+    text-align: center;
+    background-image: url(Kart.png);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: top;
+}
+
+.kontaktossbilde{
+    z-index: 0;
+    
+}
+
+h5{
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #b9b9b9; 
+}
+
+/*Innstillinger til bilder fra bildegaleri */
+.bilder {
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.bilde-container {
+    height: 260px;
+    width: 390px;
+    overflow: hidden;         /* Viktig: klipper bildet ved hover */
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(111, 111, 111, 0.607);
+}
+
+.bilde-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bilde-container:hover img {
+    transform: scale(1.05);  /* Zoomer inn uten å "bryte ut" */
+}
+
+
+.Bilde-i-midten {
+    display: flex;
+    align-items: center;
+    
+}
+
+.Om-oss {
+    color: #000000;
+    width: 85%;
+}
+
+
+
+
+
+.fordeller {
+  display: flex; /*Plaserer punktene ved siden av hverandre*/
+  margin: 30px auto;
+  width: 90%;
+}
+
+.icon {
+  font-size: 40px;
+  color: #2c3e75; /* mørk blå farge */
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p1 {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+}
+
+
+
+.kontaktoss {
+  display: flex; /*Plaserer punktene ved siden av hverandre*/
+}
+
+.icon1 {
+  font-size: 27px;
+  color: #c3c3c3; /* mørk blå farge */
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 22px;
+  color: #b4b4b4; /* mørk blå farge */
+  margin-bottom: 15px;
+}
+
+p5 {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #b4b4b4;
+  padding-right: 50px;
+}
+
+
+.link-til-medier{
+    display: flex; /*Plaserer ikonene ved siden av hverandre*/
+    padding-top: 10px;
+}
+
+.facebook{
+    padding-right: 10px;
+}
+
+
+/* Kontaktskjema */
+.kontakt {
+    padding-top: -100px;
+    max-width: 100%; /* Full bredde */
+    margin: 0 auto; /* Sentraliserer skjemaet */
+    font-family: Arial, sans-serif; /* Ren skrifttype */
+    display: flex; /* Bruker flex for layout */
+    justify-content: center; /* Sentrerer innholdet */
+    color: white;
+}
+
+.kontakt table {
+    width: 100%; /* Full bredde for tabellen */
+}
+
+.kontakt td {
+    padding: 10px; /* Indre avstand i cellene */
+    vertical-align: top; /* Justerer innholdet til toppen */
+}
+
+.kontakt input[type="text"],
+.kontakt textarea {
+    width: 300px; /* Full bredde for tekstfelt */
+    padding: 10px; /* Indre avstand */
+    border: 1px solid #ccc; /* Lys grå kantlinje */
+    border-radius: 5px; /* Runde hjørner */
+    font-size: 14px; /* Tekststørrelse */
+    background-color: #ffffff
+}
+
+.kontakt textarea {
+    height: 100px; /* Endrer høyde */
+    width: 300px; /* Endrer bredde */
+    background-color: #ffffff;
+}
+
+.kontakt input[type="submit"] {
+    background-color: #429eff; /* Blå bakgrunn */
+    color: rgb(255, 255, 255); /* Hvit tekst */
+    padding: 10px 20px; /* Indre avstand */
+    border: none; /* Ingen kantlinje */
+    border-radius: 5px; /* Runde hjørner */
+    cursor: pointer; /* Klikkbart ikon */
+    font-size: 16px; /* Større tekst */
+}
+
+.kontakt input[type="submit"]:hover {
+    background-color: #b6b6b6; /* Grå bakgrunn ved hover */
+}
+
+.thin-line {
+    width: 900px;
+}
+
+.bunn-bakgrunn{
+    background-color: #212121; /* Grå bakgrunn med 80 % gjennomsiktighet */
+    width: 100%; /* Dekker 70 % av bredden */
+    margin: 0 auto; /* Sentrerer grå bakgrunn */
+    margin-top: 0px; /* Unngå overlapping med hoved-menyen */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Sentrerer bakgrunn*/
+    text-align: center;
+}
