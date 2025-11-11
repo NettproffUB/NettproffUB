@@ -1,0 +1,383 @@
+
+body{
+    background: color #212121;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth; /* Glatt scrolling */
+    scroll-padding-top: 90px; /* Justerer hvor langt ned siden blar */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/*a, a:visited {
+  color: inherit;
+  text-decoration: none;
+}*/
+
+h1 {
+    padding-top: 260px;
+    text-align: center; /* Sentraliserer overskriften */
+    font-size: xxx-large; /* Stor skriftstørrelse */
+    color: #ffffff00; /* Mørk grå tekst */
+    /*text-shadow: 0px 2px 5px rgb(255, 255, 255); /* Lett hvit skygge */
+}
+
+h7 {
+    color: #ffffff;
+    padding-top: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.logo{
+    position: relative;
+    position: fixed;
+    display: flex;
+    margin-top: 0;
+    top: -55px;
+    left: 30px;
+    z-index: 10; /* Bakgrunnsnivå */
+}
+
+/* Øverste bilde på side 1 */
+.Øverste-bilde{
+    padding-top: 80px; /* Fjerner padding */
+    width: 100.5%; /* Bildet dekker hele bredden */
+    z-index: 0; /* Bakgrunnsnivå */
+    display: flex;
+    justify-content: center;
+}
+
+/* Meny som for scrolling */
+.meny {
+    position: fixed; /* Holder menyen på toppen av vinduet */
+    top: 0px; /* 4 piksler fra toppen */
+    right: 0; /* Plassering på høyre side */
+    width: 100%; /* Menyen dekker 88% av bredden */
+    background-color: #000e51; /* Lys grå bakgrunn */
+    padding: 20px 50px; /* Justerer indre avstand */
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.466); /* Skygge */
+    text-align: right; /* Sentrerer innholdet */
+    border-radius: 3px; /* Runde hjørner */
+    z-index: 1;
+    max-height: 60px;
+}
+
+/* Stiler for lenkene i menyen */
+.meny a {
+    margin: 0 2%; /* Avstand mellom lenkene */
+    text-decoration: none; /* Ingen understrekning */
+    color: #ffffff; /* Svart tekst */
+    padding: 20px 5px; /* Indre avstand */
+    display: inline-block; /* Vises i samme linje */
+    border-radius: 3px; /* Runde hjørner */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.meny a:hover {
+    /*padding: 1px 1px; /* Justerer størrelsen ved hover */
+    color: #c6c6c6; /* Hvit tekstfarge */
+    /*background-color: #c0c0c0; /* Grå bakgrunn ved hover */
+    text-decoration: none; /* Fjerner understrekning */
+    border-radius: 3px; /* Runde hjørner */
+}
+
+/*Hvit bakgrunn bak teksten */
+.Om-oss-kort {
+    background-color: #000e51; /* Grå bakgrunn med 80 % gjennomsiktighet */
+    width: 100.5%; /* Dekker 70 % av bredden */
+    /*margin: 0 auto; /* Sentrerer grå bakgrunn */
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.667); /* Skygge */
+    min-height: 100px; /* Gjør at bakgrunn dekker hele sidehøyden */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Sentrerer bakgrunn*/
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/*Hvit bakgrunn bak teksten */
+.sentral-bakgrunn {
+    background-color: #374664; /* Grå bakgrunn med 80 % gjennomsiktighet */
+    width: 100%; /* Dekker 70 % av bredden */
+    margin: 0 auto; /* Sentrerer grå bakgrunn */
+    /*box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.667); /* Skygge */
+    min-height: 100vh; /* Gjør at bakgrunn dekker hele sidehøyden */
+    margin-top: 0px; /* Unngå overlapping med hoved-menyen */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Sentrerer bakgrunn*/
+    text-align: center;
+    margin-top: 0px;
+}
+
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+
+
+.bakgrunn-kontaktoss {
+    background-color: #212121; /* Grå bakgrunn med 80 % gjennomsiktighet */
+    width: 100%; /* Dekker 70 % av bredden */
+    margin: 0 auto; /* Sentrerer grå bakgrunn */
+    min-height: 100vh; /* Gjør at bakgrunn dekker hele sidehøyden */
+    margin-top: 0px; /* Unngå overlapping med hoved-menyen */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Sentrerer bakgrunn*/
+    text-align: center;
+    background-image: url(Kart.png);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center 20px; /* midtstilt horisontalt, flyttet 120px ned */
+}
+
+
+/*Innstillinger til bilder fra bildegaleri*/
+.bilder {
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.bilde-container {
+    height: 260px;
+    width: 390px;
+    overflow: hidden;         /* Viktig: klipper bildet ved hover */
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(111, 111, 111, 0.607);
+}
+
+.bilde-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bilde-container:hover img {
+    transform: scale(1.05);  /* Zoomer inn uten å "bryte ut" */
+}
+
+
+.Bilde-i-midten {
+    display: flex;
+    align-items: center;
+    
+}
+
+.Om-oss {
+    color: #ffffff;
+    width: 80%;
+    line-height: 1.4;
+    text-align: center; /* <-- midtstiller tekst */
+    margin: 0 auto; /* <-- sentrerer selve boksen */
+}
+
+
+
+.fordeller {
+  display: flex;
+  justify-content: center;     /* Sentrerer punktene horisontalt */
+  align-items: flex-start;         /* Sentrerer innholdet vertikalt */
+  gap: 60px;                   /* Avstand mellom punktene */
+  margin: 20px auto;           /* Sentral plassering på siden */
+  width: 80%;
+  text-align: center;          /* Sentrerer teksten inni hvert punkt */
+  flex-wrap: wrap;
+}
+
+.fordell {
+  max-width: 300px;          /* Fast bredde på hvert kort for jevn layout */
+  min-height: 250px;         /* Samme høyde for å gjøre de like høye */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-start;         /* Hindrer at de blir for brede */
+}
+
+.icon {
+  font-size: 40px;
+  color: #f5f5f5;              /* Lysere farge for bedre kontrast */
+  margin-bottom: 0px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+p1 {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+
+
+.bilde-seksjon {
+  display: flex;
+  justify-content: center; /* Sentrerer rad */
+  align-items: flex-start;
+  gap: 40px; /* Avstand mellom bildene */
+  flex-wrap: wrap; /* Gjør at de bryter linje på små skjermer */
+  margin: 30px 0;
+  text-align: center;
+}
+
+.bilde-kort img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Hindrer forvrengning */
+  border-radius: 50%; /* Gjør bildet rundt */
+  border: 5px solid #aaa; /* Grå ramme */
+  margin-bottom: -30px;
+  transition: transform 0.3s ease; /* Pen hover-effekt */
+}
+
+.bilde-kort img:hover {
+  transform: scale(1.05);
+}
+
+.bilde-kort p {
+  color: white; /* eller svart, avhengig av bakgrunn */
+  font-size: 16px;
+  margin-top: -40px;
+}
+
+h6 {
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+h5{
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff; 
+}
+
+
+.kontaktoss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;             /* Avstand mellom punktene */
+  flex-wrap: wrap;       /* Bryter linje på små skjermer */
+  padding-bottom: 20px;
+}
+
+.kontaktinfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;             /* Avstand mellom ikon og tekst */
+  color: white;
+}
+
+.ikon {
+  font-size: 30px;       /* ← endre denne for å styre ikonstørrelsen */
+  width: 35px;           /* Holder alt på linje */
+  text-align: center;
+}
+
+
+
+.kontaktinfo p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.link-til-medier{
+    display: flex; /*Plaserer ikonene ved siden av hverandre*/
+    padding-top: 10px;
+}
+
+.facebook{
+    padding-right: 10px;
+}
+
+
+/* Kontaktskjema */
+.kontakt {
+    padding-top: -100px;
+    max-width: 100%; /* Full bredde */
+    margin: 0 auto; /* Sentraliserer skjemaet */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex; /* Bruker flex for layout */
+    justify-content: center; /* Sentrerer innholdet */
+    color: white;
+}
+
+.kontakt table {
+    width: 100%; /* Full bredde for tabellen */
+}
+
+.kontakt td {
+    padding: 10px; /* Indre avstand i cellene */
+    vertical-align: top; /* Justerer innholdet til toppen */
+}
+
+.kontakt input[type="text"],
+.kontakt textarea {
+    width: 300px; /* Full bredde for tekstfelt */
+    padding: 10px; /* Indre avstand */
+    border: 1px solid #ccc; /* Lys grå kantlinje */
+    border-radius: 5px; /* Runde hjørner */
+    font-size: 14px; /* Tekststørrelse */
+    background-color: #ffffff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kontakt textarea {
+    height: 100px; /* Endrer høyde */
+    width: 300px; /* Endrer bredde */
+    background-color: #ffffff;
+}
+
+.kontakt input[type="submit"] {
+    background-color: #000e51; /* Blå bakgrunn */
+    color: rgb(255, 255, 255); /* Hvit tekst */
+    padding: 10px 20px; /* Indre avstand */
+    border: none; /* Ingen kantlinje */
+    border-radius: 5px; /* Runde hjørner */
+    cursor: pointer; /* Klikkbart ikon */
+    font-size: 16px; /* Større tekst */
+}
+
+.kontakt input[type="submit"]:hover {
+    background-color: #001475; /* Grå bakgrunn ved hover */
+}
+
+.thin-line {
+    width: 900px;
+}
+
+.bunn-bakgrunn{
+    background-color: #212121; /* Grå bakgrunn med 80 % gjennomsiktighet */
+    width: 100%; /* Dekker 70 % av bredden */
+    margin: 0 auto; /* Sentrerer grå bakgrunn */
+    margin-top: 0px; /* Unngå overlapping med hoved-menyen */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Sentrerer bakgrunn*/
+    text-align: center;
+}
